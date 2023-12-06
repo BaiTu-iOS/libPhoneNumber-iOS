@@ -1,0 +1,4 @@
+module libPhoneNumber {
+    umbrella "/Users/yuxilong/Desktop/code/github/libPhoneNumber-iOS/libPhoneNumber"
+    export *
+}
