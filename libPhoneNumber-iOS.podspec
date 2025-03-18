@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "libPhoneNumber-iOS"
-  s.version      = "1.0.6.BAITU"
+  s.version      = "1.0.7.BAITU"
   s.summary      = "iOS library for parsing, formatting, storing and validating international phone numbers from libphonenumber library."
   s.description  = <<-DESC
 libPhoneNumber for iOS
