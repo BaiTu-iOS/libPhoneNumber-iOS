@@ -60,7 +60,7 @@ func loadJS(from url: URL, to context: JSContext) {
 let context = JSContext()!
 context.exceptionHandler = { _, exception in
   fputs("Javascript exception thrown: \(exception!)\n", __stderrp)
-//  exit(1)
+  //  exit(1)
 }
 
 // Load required dependencies.
@@ -84,9 +84,19 @@ let requires = """
 context.evaluateScript(requires)
 
 // Load metadata file from GitHub.
-let phoneMetadata = URL(string: "https://raw.githubusercontent.com/google/libphonenumber/master/javascript/i18n/phonenumbers/metadata.js")!
-let phoneMetadataForTesting = URL(string: "https://raw.githubusercontent.com/google/libphonenumber/master/javascript/i18n/phonenumbers/metadatafortesting.js")!
-let shortNumberMetadata = URL(string: "https://raw.githubusercontent.com/google/libphonenumber/master/javascript/i18n/phonenumbers/shortnumbermetadata.js")!
+// let phoneMetadata = URL(string: "https://raw.githubusercontent.com/google/libphonenumber/master/javascript/i18n/phonenumbers/metadata.js")!
+let phoneMetadata = URL(
+  string:
+    "https://raw.githubusercontent.com/google/libphonenumber/refs/heads/master/javascript/i18n/phonenumbers/metadata.js"
+)!
+let phoneMetadataForTesting = URL(
+  string:
+    "https://raw.githubusercontent.com/google/libphonenumber/refs/heads/master/javascript/i18n/phonenumbers/metadatafortesting.js"
+)!
+let shortNumberMetadata = URL(
+  string:
+    "https://raw.githubusercontent.com/google/libphonenumber/refs/heads/master/javascript/i18n/phonenumbers/shortnumbermetadata.js"
+)!
 
 let currentDir = FileManager.default.currentDirectoryPath
 let baseURL = URL(fileURLWithPath: currentDir).appendingPathComponent("generatedJSON")
