@@ -641,7 +641,7 @@ static NSArray *GEO_MOBILE_COUNTRIES;
  * - param {string} number a string of characters representing a phone number.
  * @return {string} the normalized string version of the phone number.
  */
-- (NSString *)normalize:(NSString *)number {
+- (NSString * _Nullable)normalize:(NSString *)number {
   if ([self matchesEntirely:VALID_ALPHA_PHONE_PATTERN_STRING string:number]) {
     return [self normalizeHelper:number
         normalizationReplacements:ALL_NORMALIZATION_MAPPINGS
