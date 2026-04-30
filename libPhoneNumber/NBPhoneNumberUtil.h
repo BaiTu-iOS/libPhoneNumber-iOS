@@ -11,6 +11,8 @@
 
 @class NBPhoneMetaData, NBPhoneNumber, NBMetadataHelper;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NBPhoneNumberUtil : NSObject
 
 + (NBPhoneNumberUtil * _Nonnull)sharedInstance;
@@ -143,5 +145,7 @@
  * @return  the mobile token, as a string, for the given country calling code.
  */
 - (NSString *)getCountryMobileTokenFromCountryCode:(NSInteger)countryCallingCode;
+
+NS_ASSUME_NONNULL_END
 
 @end
