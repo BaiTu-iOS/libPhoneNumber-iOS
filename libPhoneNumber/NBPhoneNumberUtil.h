@@ -29,7 +29,7 @@
 // libPhoneNumber Util functions
 - (NSString *)convertAlphaCharactersInNumber:(NSString *)number;
 
-- (NSString *)normalize:(NSString *)phoneNumber;
+- (NSString * _Nullable)normalize:(NSString *)phoneNumber;
 - (NSString *)normalizeDigitsOnly:(NSString *)number;
 - (NSString *)normalizeDiallableCharsOnly:(NSString *)number;
 
