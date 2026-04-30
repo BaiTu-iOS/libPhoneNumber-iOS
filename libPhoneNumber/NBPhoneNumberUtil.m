@@ -115,7 +115,7 @@ static NSArray *GEO_MOBILE_COUNTRIES;
 
 #pragma mark - Deprecated methods
 
-+ (NBPhoneNumberUtil *)sharedInstance {
++ (NBPhoneNumberUtil * _Nonnull)sharedInstance {
   static NBPhoneNumberUtil *sharedOnceInstance = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{

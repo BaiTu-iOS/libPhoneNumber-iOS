@@ -13,7 +13,7 @@
 
 @interface NBPhoneNumberUtil : NSObject
 
-+ (NBPhoneNumberUtil *)sharedInstance;
++ (NBPhoneNumberUtil * _Nonnull)sharedInstance;
 - (instancetype)initWithMetadataHelper:(NBMetadataHelper *)helper;
 
 @property(nonatomic, strong, readonly) NSDictionary *DIGIT_MAPPINGS;
